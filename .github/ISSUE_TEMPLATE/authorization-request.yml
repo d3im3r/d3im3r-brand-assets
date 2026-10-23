@@ -1,0 +1,58 @@
+name: Authorization request
+description: Request written permission to use d3im3r brand assets.
+title: "[Authorization] "
+labels:
+  - authorization-request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issues are public. Do not include private or sensitive information.
+        Submitting this request does not grant permission. Wait for explicit written approval from d3im3r before using or redistributing any assets.
+  - type: input
+    id: assets
+    attributes:
+      label: Assets requested
+      description: List the logo, icon, favicon, or other files you want to use.
+      placeholder: "For example: assets/svg/horizontal-light.svg"
+    validations:
+      required: true
+  - type: textarea
+    id: intended-use
+    attributes:
+      label: Intended use
+      description: Explain the project and where/how the assets will appear.
+      placeholder: "Describe the website, application, or other project."
+    validations:
+      required: true
+  - type: input
+    id: project-url
+    attributes:
+      label: Project URL
+      description: Provide a public URL if one is available.
+      placeholder: "https://"
+    validations:
+      required: false
+  - type: dropdown
+    id: redistribution
+    attributes:
+      label: Will you redistribute or publish the assets as downloadable files?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+  - type: textarea
+    id: redistribution-details
+    attributes:
+      label: Redistribution details
+      description: If yes, describe what will be redistributed and how.
+    validations:
+      required: false
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I understand that this request does not grant permission and that I must wait for explicit written approval from d3im3r.
+          required: true
