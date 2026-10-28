@@ -56,10 +56,8 @@ The examples below use the `main` branch. For production deployments, replace `@
 />
 ```
 
-## Ownership and permissions
+## License and usage
 
-The artwork, `d3im3r` name, and owl-chip identity are exclusively owned by **d3im3r**. All rights are reserved. Prior written authorization is required before using the assets, including in personal projects. Redistribution, resale, sublicensing, or publication is not allowed without separate written authorization. See [`LICENSE`](LICENSE) for the full terms.
+The repository and all its contents, including artwork, logos, symbols, icons, favicons, and the `d3im3r` brand elements, are freely available for personal and commercial use, modification, redistribution, sublicensing, resale, and publication. No authorization issue, prior approval, attribution, or payment is required. See [`LICENSE`](LICENSE) for the full permission grant.
 
-To request permission, [open an authorization issue](https://github.com/d3im3r/d3im3r-brand-assets/issues/new?template=authorization-request.yml). Issues are public; do not include private or sensitive information. A request is not permission: wait for explicit written approval from d3im3r in the issue before using or redistributing any assets.
-
-See [`BRAND.md`](BRAND.md) for brand usage guidance.
+See [`BRAND.md`](BRAND.md) for optional brand usage recommendations.

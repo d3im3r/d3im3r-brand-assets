@@ -6,7 +6,7 @@
 4. Create a GitHub release tag `v1.0.0`.
 5. Verify the README links resolve to `d3im3r/d3im3r-brand-assets`.
 6. Test one jsDelivr URL and both light/dark logo variants in your app.
-7. Enable GitHub Issues and create the `authorization-request` label so requests can be submitted and tracked using the issue form.
+7. Verify that the published license and documentation allow free use without an authorization issue or prior approval.
 
 **Repository description:** Official d3im3r owl-chip brand assets: scalable logos, icons, favicons, and light/dark variants for web and software projects.
 
