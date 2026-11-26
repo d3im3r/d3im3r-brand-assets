@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json.schemastore.org/design-tokens.json",
+  "brand": "d3im3r",
+  "version": "1.0.0",
+  "modes": {
+    "dark": {
+      "name": "Dark Mode (Default)",
+      "colors": {
+        "background": {
+          "hex": "#0B1727",
+          "token": "--background",
+          "appToken": "--app-bg",
+          "tailwind": "bg-app-bg",
+          "role": "Fondo principal de la aplicación"
+        },
+        "panel": {
+          "hex": "#101E30",
+          "token": "--card",
+          "appToken": "--app-panel",
+          "tailwind": "bg-app-panel",
+          "role": "Paneles laterales, tarjetas y nodos"
+        },
+        "grid": {
+          "hex": "#35516B",
+          "token": "--border",
+          "appToken": "--app-grid",
+          "tailwind": "border-app-grid",
+          "role": "Bordes, guías y rejilla del canvas"
+        },
+        "text": {
+          "hex": "#FFFFFF",
+          "token": "--foreground",
+          "appToken": "--app-text",
+          "tailwind": "text-app-text",
+          "role": "Texto principal"
+        },
+        "muted": {
+          "hex": "#A5B4C7",
+          "token": "--muted-foreground",
+          "appToken": "--app-muted",
+          "tailwind": "text-app-muted",
+          "role": "Texto secundario y etiquetas auxiliares"
+        },
+        "green": {
+          "hex": "#4ADE80",
+          "token": "--secondary",
+          "appToken": "--app-green",
+          "tailwind": "text-app-green",
+          "role": "Estado activo y nodos de salida / subscribers"
+        },
+        "cyan": {
+          "hex": "#22D3EE",
+          "token": "--primary",
+          "appToken": "--app-cyan",
+          "tailwind": "text-app-cyan",
+          "role": "Acento principal, handles de conexión y focus"
+        },
+        "orange": {
+          "hex": "#FFAD35",
+          "token": "--chart-3",
+          "appToken": "--app-orange",
+          "tailwind": "text-app-orange",
+          "role": "Advertencias"
+        },
+        "red": {
+          "hex": "#FB7185",
+          "token": "--destructive",
+          "appToken": "--app-red",
+          "tailwind": "text-app-red",
+          "role": "Conflictos de pines, errores o alarmas"
+        }
+      }
+    },
+    "light": {
+      "name": "Light Mode",
+      "colors": {
+        "background": {
+          "hex": "#F4F7FB",
+          "token": "--background",
+          "appToken": "--app-bg",
+          "tailwind": "bg-app-bg",
+          "role": "Fondo general claro"
+        },
+        "panel": {
+          "hex": "#FFFFFF",
+          "token": "--card",
+          "appToken": "--app-panel",
+          "tailwind": "bg-app-panel",
+          "role": "Tarjetas y paneles en blanco limpio"
+        },
+        "grid": {
+          "hex": "#CBD5E1",
+          "token": "--border",
+          "appToken": "--app-grid",
+          "tailwind": "border-app-grid",
+          "role": "Bordes y separadores"
+        },
+        "text": {
+          "hex": "#172B45",
+          "token": "--foreground",
+          "appToken": "--app-text",
+          "tailwind": "text-app-text",
+          "role": "Texto principal de alto contraste"
+        },
+        "muted": {
+          "hex": "#64748B",
+          "token": "--muted-foreground",
+          "appToken": "--app-muted",
+          "tailwind": "text-app-muted",
+          "role": "Texto secundario"
+        },
+        "green": {
+          "hex": "#16A34A",
+          "token": "--secondary",
+          "appToken": "--app-green",
+          "tailwind": "text-app-green",
+          "role": "Estado activo y actuadores"
+        },
+        "cyan": {
+          "hex": "#0891B2",
+          "token": "--primary",
+          "appToken": "--app-cyan",
+          "tailwind": "text-app-cyan",
+          "role": "Acento principal y foco"
+        },
+        "orange": {
+          "hex": "#D97706",
+          "token": "--chart-3",
+          "appToken": "--app-orange",
+          "tailwind": "text-app-orange",
+          "role": "Advertencias"
+        },
+        "red": {
+          "hex": "#DC4660",
+          "token": "--destructive",
+          "appToken": "--app-red",
+          "tailwind": "text-app-red",
+          "role": "Errores"
+        }
+      }
+    }
+  }
+}

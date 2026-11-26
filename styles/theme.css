@@ -1,0 +1,102 @@
+/**
+ * d3im3r Visual Identity & Design System Theme
+ * Official color tokens for dark and light modes.
+ * Compatible with Tailwind CSS v4 (@theme), Shadcn UI, and vanilla CSS.
+ */
+
+:root {
+  /* d3im3r Semantic Tokens - Dark Mode (Default) */
+  --app-bg: #0B1727;
+  --app-panel: #101E30;
+  --app-grid: #35516B;
+  --app-text: #FFFFFF;
+  --app-muted: #A5B4C7;
+  --app-green: #4ADE80;
+  --app-cyan: #22D3EE;
+  --app-orange: #FFAD35;
+  --app-red: #FB7185;
+
+  /* Standard Framework Tokens (Shadcn / Tailwind compatible) */
+  --background: #0B1727;
+  --foreground: #FFFFFF;
+  --card: #101E30;
+  --card-foreground: #FFFFFF;
+  --popover: #101E30;
+  --popover-foreground: #FFFFFF;
+  --primary: #22D3EE;
+  --primary-foreground: #0B1727;
+  --secondary: #4ADE80;
+  --secondary-foreground: #0B1727;
+  --muted: #101E30;
+  --muted-foreground: #A5B4C7;
+  --accent: #101E30;
+  --accent-foreground: #FFFFFF;
+  --destructive: #FB7185;
+  --destructive-foreground: #FFFFFF;
+  --border: #35516B;
+  --input: #101E30;
+  --ring: #22D3EE;
+  --chart-3: #FFAD35;
+  --diagram-output-accent: #4ADE80;
+}
+
+[data-theme="light"],
+.light {
+  /* d3im3r Semantic Tokens - Light Mode */
+  --app-bg: #F4F7FB;
+  --app-panel: #FFFFFF;
+  --app-grid: #CBD5E1;
+  --app-text: #172B45;
+  --app-muted: #64748B;
+  --app-green: #16A34A;
+  --app-cyan: #0891B2;
+  --app-orange: #D97706;
+  --app-red: #DC4660;
+
+  /* Standard Framework Tokens (Shadcn / Tailwind compatible) */
+  --background: #F4F7FB;
+  --foreground: #172B45;
+  --card: #FFFFFF;
+  --card-foreground: #172B45;
+  --popover: #FFFFFF;
+  --popover-foreground: #172B45;
+  --primary: #0891B2;
+  --primary-foreground: #FFFFFF;
+  --secondary: #16A34A;
+  --secondary-foreground: #FFFFFF;
+  --muted: #F4F7FB;
+  --muted-foreground: #64748B;
+  --accent: #FFFFFF;
+  --accent-foreground: #172B45;
+  --destructive: #DC4660;
+  --destructive-foreground: #FFFFFF;
+  --border: #CBD5E1;
+  --input: #FFFFFF;
+  --ring: #0891B2;
+  --chart-3: #D97706;
+  --diagram-output-accent: #16A34A;
+}
+
+/* Tailwind CSS v4 Theme Registration */
+@theme inline {
+  --color-app-bg: var(--app-bg);
+  --color-app-panel: var(--app-panel);
+  --color-app-grid: var(--app-grid);
+  --color-app-text: var(--app-text);
+  --color-app-muted: var(--app-muted);
+  --color-app-green: var(--app-green);
+  --color-app-cyan: var(--app-cyan);
+  --color-app-orange: var(--app-orange);
+  --color-app-red: var(--app-red);
+}
+
+/* Vanilla CSS Helpers (Ready-to-use without Tailwind) */
+.bg-app-bg { background-color: var(--app-bg); }
+.bg-app-panel { background-color: var(--app-panel); }
+.border-app-grid { border-color: var(--app-grid); }
+.text-app-text { color: var(--app-text); }
+.text-app-muted { color: var(--app-muted); }
+.text-app-green { color: var(--app-green); }
+.text-app-cyan { color: var(--app-cyan); }
+.text-app-orange { color: var(--app-orange); }
+.text-app-red { color: var(--app-red); }
