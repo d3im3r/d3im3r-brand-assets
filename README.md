@@ -21,7 +21,7 @@ Este repositorio contiene la identidad visual oficial, los recursos vectoriales 
 | --- | --- |
 | [`styles/theme.css`](styles/theme.css) | Hoja de estilos base con tokens semánticos duales (Dark/Light) y compatibilidad nativa con Tailwind CSS v4 `@theme` |
 | [`tokens/`](tokens/) | Especificación de diseño en [`colors.json`](tokens/colors.json), variables CSS y preset para Tailwind v3 ([`tailwind.preset.js`](tokens/tailwind.preset.js)) |
-| [`snippets/`](snippets/) | Plantillas React listas para copiar: [`use-theme.ts`](snippets/use-theme.ts) (hook con persistencia) y [`theme-toggle.tsx`](snippets/theme-toggle.tsx) (botón interactivo) |
+| [`snippets/`](snippets/) | Plantillas React listas para copiar: [`use-theme.ts`](snippets/use-theme.ts) (hook de tema), [`theme-toggle.tsx`](snippets/theme-toggle.tsx) (botón Luna/Sol), [`brand-signature.tsx`](snippets/brand-signature.tsx) (firma d3im3r) y [`app-header.tsx`](snippets/app-header.tsx) (encabezado unificado de microROS Studio / FlasherLab / d3im3r-class) |
 | [`assets/favicon/`](assets/favicon/) | Favicons listos para `public/`: SVG con modo oscuro adaptativo, ICO multi-resolución, PNGs y `site.webmanifest` |
 | [`assets/svg/`](assets/svg/) | Logotipos vectoriales en orientaciones horizontal y vertical, versiones con y sin fondo |
 | [`assets/png/`](assets/png/) | Exportaciones raster en resoluciones estandarizadas (128px a 2048px) |
@@ -59,10 +59,12 @@ Esto le da a tu proyecto:
 * Modo oscuro automático con soporte de cambio mediante `data-theme="light"` o la clase `.light`.
 * Compatibilidad instantánea con Tailwind CSS v4 para aplicar opacidades con `color-mix` (ej: `bg-app-cyan/15`, `border-app-grid/50`).
 
-### 2. Copiar los componentes reactivos de tema
+### 2. Copiar los componentes reactivos de tema y header
 Copia los archivos de la carpeta [`snippets/`](snippets/) en tu estructura de componentes:
 * `snippets/use-theme.ts` ➡️ `src/hooks/use-theme.ts` (maneja la persistencia en `localStorage` y las clases en `<html>`).
 * `snippets/theme-toggle.tsx` ➡️ `src/components/theme-toggle.tsx` (botón con iconos interactivos de Luna y Sol).
+* `snippets/brand-signature.tsx` ➡️ `src/components/brand-signature.tsx` (renderizado automático del logo d3im3r según el tema activo).
+* `snippets/app-header.tsx` ➡️ `src/components/app-header.tsx` (estructura completa de encabezado del ecosistema con logo propio + firma d3im3r, selector de idioma, perfil, ayuda y atajo a GitHub).
 
 ### 3. Copiar los favicons a tu carpeta `public/`
 Copia los contenidos de [`assets/favicon/`](assets/favicon/) directamente a la carpeta `public/` de tu aplicación y referéncialos localmente en tu HTML:

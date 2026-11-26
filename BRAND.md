@@ -63,6 +63,45 @@ Este repositorio sirve como **base y punto de partida**, no como una librería c
 
 ---
 
+## 🏛️ Anatomía del Header del Ecosistema d3im3r
+
+Los proyectos insignia del ecosistema (**microROS Studio**, **flasherLab** y **d3im3r-class**) implementan una estructura de encabezado común (`AppHeader`) que equilibra la **identidad individual del producto** con el **sello de autoría d3im3r**:
+
+```
++---------------------------------------------------------------------------------------------------------+
+| [Icon] Proyecto[Acento] Studio [v1.0] | created by: [d3im3r]      [EN] [Profile] [Theme] [Help] [Repo] [User] |
++---------------------------------------------------------------------------------------------------------+
+| [Layers] PROJECTS > SECCIÓN ACTIVA (Breadcrumbs opcional)                                               |
++---------------------------------------------------------------------------------------------------------+
+```
+
+### 1. Zona Izquierda: Identidad Propia + Co-Branding
+* **Icon Box Temático:** Contenedor de 32×32 (`size-8 rounded-lg`) con fondo semitransparente (`bg-accent/10`), borde tenue (`border-accent/30`) e icono alusivo al dominio de la app:
+  * `microROS Studio`: Icono `Cpu` con acento Cyan/Verde.
+  * `flasherLab Studio`: Icono `Cpu` con acento Cyan (`bg-app-cyan/10 border-app-cyan/30 text-app-cyan`).
+  * `d3im3r-class (Aula)`: Icono `BookOpen` / `topbar-badge` para el entorno de aprendizaje.
+* **Wordmark del Proyecto:** Tipografía semibold con la palabra clave o acrónimo destacado en el color de acento de la app (ej: `micro`**`ROS`** `Studio`, `flasher`**`Lab`** `Studio`, **`aula`**`.`).
+* **Badge de Versión / Fase:** Indicador monospaciado sutil (`text-[9px] border border-app-grid`), ej. `v1.0`, `BETA 0.1`, `v1.2`.
+* **Separador de Autoría:** Línea vertical discreta (`border-l border-app-grid/70 pl-3`).
+* **Firma d3im3r Co-Branded:** Etiqueta en miniatura `created by:` (`text-[10px] text-app-muted`) seguida del logotipo horizontal reactivo (`horizontal-light.svg` / `horizontal-dark.svg` vía [`snippets/brand-signature.tsx`](snippets/brand-signature.tsx)).
+
+### 2. Zona Derecha: Controles de Sistema y Preferencias
+* **Selector de Idioma:** Botón compacto con icono `Languages` y código de idioma monospaciado (`EN`, `ES`).
+* **Selector de Workspace / Perfil:** Desplegable estilizado con el alias del usuario o entorno activo.
+* **Conmutador de Tema (`ThemeToggle`):** Botón con iconos interactivos de **Luna en Cyan** (modo oscuro) y **Sol en Ámbar** (modo claro).
+* **Botón de Ayuda:** Icono `CircleHelp` para documentación o modales de atajos.
+* **Enlace al Proyecto Base (`Base project`):** Botón estilizado con `GitBranch` y `ArrowUpRight` enlazando al repositorio correspondiente.
+* **Control de Sesión:** Nombre de usuario y botón de salida con hover de alerta (`hover:text-app-red`).
+
+### 3. Sub-Barra de Migas de Pan (Breadcrumb Strip)
+En herramientas de desarrollo y paneles interactivos (como *microROS Studio* o *flasherLab*), se añade una sub-barra inferior con `border-t border-app-grid/40 bg-app-panel/40`:
+* Icono `Layers3`.
+* Ruta jerárquica con separadores `ChevronRight` (ej: `PROJECTS > FLASHERLAB STUDIO` con el último término resaltado en `text-app-cyan`).
+
+> Puedes copiar la implementación lista para producción de este encabezado desde [`snippets/app-header.tsx`](snippets/app-header.tsx) y [`snippets/brand-signature.tsx`](snippets/brand-signature.tsx).
+
+---
+
 ## Free usage
 
 The repository and all its contents, including the brand name and emblem, may be used, modified, and redistributed freely for personal or commercial purposes. No authorization issue, prior written approval, attribution, or payment is required. The preferred treatments above are recommendations, not conditions of use. See [LICENSE](LICENSE) for the full permission grant.
