@@ -52,17 +52,14 @@ El ecosistema d3im3r implementa un sistema de diseño dual (Oscuro por defecto y
 
 ---
 
-## 🛠️ Integración en nuevos proyectos
+## 🛠️ Filosofía de diseño: Cimientos comunes e identidad propia
 
-Para iniciar un proyecto con el branding y estilos d3im3r:
+Este repositorio sirve como **base y punto de partida**, no como una librería compartida en tiempo de ejecución. Cada proyecto nuevo que se desarrolle en el ecosistema d3im3r debe:
 
-1. **Importar estilos directamente vía CDN:**
-   ```css
-   @import "https://cdn.jsdelivr.net/gh/d3im3r/d3im3r-brand-assets@v1.0.0/styles/theme.css";
-   ```
-2. **Tailwind CSS v4:** El archivo `theme.css` registra automáticamente la directiva `@theme inline`, permitiendo clases utilitarias con opacidad automática (ej. `bg-app-cyan/15`, `border-app-grid/60`).
-3. **Consumir tokens JSON:** [`tokens/colors.json`](tokens/colors.json) contiene la especificación para Figma, scripts de construcción o herramientas de diseño.
-4. **Plantillas React listas:** Consulta [`snippets/use-theme.ts`](snippets/use-theme.ts) y [`snippets/theme-toggle.tsx`](snippets/theme-toggle.tsx) para soporte instantáneo de selector de tema con persistencia en `localStorage`.
+1. **Copiar y adaptar (Scaffold / Starter Kit):** Incorporar los archivos base (`styles/theme.css`, `snippets/`, favicons) directamente en el árbol de código del nuevo proyecto.
+2. **Desarrollar una identidad propia:** Utilizar la arquitectura de tokens (`--app-bg`, `--app-panel`, `--app-cyan`, etc.) para mantener coherencia visual y usabilidad, pero sintiéndose libre de introducir colores de acento particulares, estados especializados (sensores, actuadores, gráficos) o imaginería adaptada a la función de la herramienta.
+3. **Autonomía total:** Al no depender de imports remotos ni CDNs externos, ningún proyecto se verá afectado por evoluciones futuras en otros productos.
+4. **Tooling y diseño:** Se proporciona [`tokens/colors.json`](tokens/colors.json) para sincronizar con Figma o herramientas de diseño, y [`tokens/tailwind.preset.js`](tokens/tailwind.preset.js) para compatibilidad con Tailwind v3.
 
 ---
 

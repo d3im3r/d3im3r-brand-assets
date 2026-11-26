@@ -3,118 +3,94 @@
     <source media="(prefers-color-scheme: dark)" srcset="assets/svg/horizontal-dark.svg" />
     <img src="assets/svg/horizontal-light.svg" alt="d3im3r owl-chip brand" width="520" />
   </picture>
-  <p>Official visual identity & design system for d3im3r websites, software, and embedded-systems projects.</p>
+  <p>Official visual identity, design system reference, and starter foundation for d3im3r projects.</p>
 </div>
 
 ![d3im3r brand preview](docs/preview.png)
 
-The official visual identity for projects created by [@d3im3r](https://github.com/d3im3r). The owl-chip combines an owl with microcontroller-inspired geometry and the `{o⌄o}` signature.
+Este repositorio contiene la identidad visual oficial, los recursos vectoriales y las bases de diseño de [@d3im3r](https://github.com/d3im3r).
 
-## Resources
+> **💡 Principio de uso (Autonomía por proyecto):**  
+> Este repositorio funciona como **guía de referencia y plantilla de inicio (starter kit)**, **no como una dependencia externa de tiempo de ejecución**. Cada nuevo proyecto toma estos activos, tokens y componentes como cimientos en su propio repositorio, permitiéndole forjar su propia identidad de forma completamente autónoma sin depender de imports externos.
 
-| Resource | Contents |
+---
+
+## Recursos disponibles
+
+| Recurso | Descripción |
 | --- | --- |
-| [`assets/svg/`](assets/svg/) | Scalable horizontal and vertical logos, plus standalone symbols |
-| [`assets/png/`](assets/png/) | Raster exports in multiple sizes (128px–2048px), transparent and opaque variants |
-| [`assets/favicon/`](assets/favicon/) | Browser and app icons in adaptive SVG, multi-size ICO, PNGs, and web manifest |
-| [`styles/theme.css`](styles/theme.css) | Single-import CSS theme with dark/light mode tokens and Tailwind CSS v4 `@theme` |
-| [`tokens/`](tokens/) | Design tokens in JSON ([`colors.json`](tokens/colors.json)), CSS, and Tailwind v3 preset |
-| [`snippets/`](snippets/) | Ready-to-use React templates: [`use-theme.ts`](snippets/use-theme.ts) & [`theme-toggle.tsx`](snippets/theme-toggle.tsx) |
-| [`sources/`](sources/) | Raw, high-resolution source graphics |
-
-Choose `*-light` assets for light surfaces and `*-dark` for dark surfaces. Files with `-background` have an opaque background; the others are transparent. SVG is recommended where supported.
+| [`styles/theme.css`](styles/theme.css) | Hoja de estilos base con tokens semánticos duales (Dark/Light) y compatibilidad nativa con Tailwind CSS v4 `@theme` |
+| [`tokens/`](tokens/) | Especificación de diseño en [`colors.json`](tokens/colors.json), variables CSS y preset para Tailwind v3 ([`tailwind.preset.js`](tokens/tailwind.preset.js)) |
+| [`snippets/`](snippets/) | Plantillas React listas para copiar: [`use-theme.ts`](snippets/use-theme.ts) (hook con persistencia) y [`theme-toggle.tsx`](snippets/theme-toggle.tsx) (botón interactivo) |
+| [`assets/favicon/`](assets/favicon/) | Favicons listos para `public/`: SVG con modo oscuro adaptativo, ICO multi-resolución, PNGs y `site.webmanifest` |
+| [`assets/svg/`](assets/svg/) | Logotipos vectoriales en orientaciones horizontal y vertical, versiones con y sin fondo |
+| [`assets/png/`](assets/png/) | Exportaciones raster en resoluciones estandarizadas (128px a 2048px) |
+| [`sources/`](sources/) | Ilustraciones fuente originales en alta resolución |
 
 ---
 
-## 🎨 Dual Color Palette & Design Tokens
+## 🎨 Paleta de Referencia y Tokens Semánticos
 
-d3im3r uses a high-contrast dual theme (Dark by default, Light mode supported):
+La base de diseño d3im3r proporciona una estructura de alto contraste pensada para dashboards técnicos, herramientas de desarrollo y sistemas embebidos. Inicia en **Modo Oscuro por defecto** y cuenta con soporte completo para **Modo Claro**:
 
-| Semantic Role | 🌙 Dark Mode (Default) | ☀️ Light Mode | CSS Variable | Tailwind Utility |
+| Rol Semántico | 🌙 Modo Oscuro (Default) | ☀️ Modo Claro | Variable CSS | Utilidad Tailwind |
 | :--- | :--- | :--- | :--- | :--- |
-| **Background** | `#0B1727` | `#F4F7FB` | `--app-bg` / `--background` | `bg-app-bg` |
-| **Panel / Card** | `#101E30` | `#FFFFFF` | `--app-panel` / `--card` | `bg-app-panel` |
-| **Grid / Border** | `#35516B` | `#CBD5E1` | `--app-grid` / `--border` | `border-app-grid` |
-| **Text** | `#FFFFFF` | `#172B45` | `--app-text` / `--foreground` | `text-app-text` |
-| **Muted** | `#A5B4C7` | `#64748B` | `--app-muted` / `--muted-foreground` | `text-app-muted` |
-| **Active / Green** | `#4ADE80` | `#16A34A` | `--app-green` / `--secondary` | `text-app-green` |
-| **Accent / Cyan** | `#22D3EE` | `#0891B2` | `--app-cyan` / `--primary` | `text-app-cyan` |
-| **Warning / Orange** | `#FFAD35` | `#D97706` | `--app-orange` / `--chart-3` | `text-app-orange` |
-| **Error / Red** | `#FB7185` | `#DC4660` | `--app-red` / `--destructive` | `text-app-red` |
-
-See [`BRAND.md`](BRAND.md) for full design guidelines and architectural token mappings.
+| **Fondo Principal (Background)** | `#0B1727` | `#F4F7FB` | `--app-bg` / `--background` | `bg-app-bg` |
+| **Paneles y Tarjetas (Panel)** | `#101E30` | `#FFFFFF` | `--app-panel` / `--card` | `bg-app-panel` |
+| **Bordes y Rejilla (Grid)** | `#35516B` | `#CBD5E1` | `--app-grid` / `--border` | `border-app-grid` |
+| **Texto Principal (Text)** | `#FFFFFF` | `#172B45` | `--app-text` / `--foreground` | `text-app-text` |
+| **Texto Secundario (Muted)** | `#A5B4C7` | `#64748B` | `--app-muted` / `--muted-foreground` | `text-app-muted` |
+| **Estado Activo (Green)** | `#4ADE80` | `#16A34A` | `--app-green` / `--secondary` | `text-app-green` |
+| **Acento Principal (Cyan)** | `#22D3EE` | `#0891B2` | `--app-cyan` / `--primary` | `text-app-cyan` |
+| **Advertencias (Orange)** | `#FFAD35` | `#D97706` | `--app-orange` / `--chart-3` | `text-app-orange` |
+| **Alarmas y Errores (Red)** | `#FB7185` | `#DC4660` | `--app-red` / `--destructive` | `text-app-red` |
 
 ---
 
-## Web usage
+## 🚀 Cómo iniciar un nuevo proyecto con estas bases
 
-The examples below use the published tag `@v1.0.0` for production pinning (or replace with `@main` for bleeding-edge).
+Al comenzar una nueva aplicación o sitio web, sigue estos pasos para adoptar los cimientos y personalizar su identidad:
 
-### 1. Import Theme & Styles (Tailwind / CSS)
+### 1. Copiar los estilos a tu proyecto
+Copia el contenido de [`styles/theme.css`](styles/theme.css) directamente al archivo de estilos globales de tu proyecto (por ejemplo `src/app/globals.css` o `src/index.css`).
 
-Import the official stylesheet into your project (`globals.css` or HTML):
+Esto le da a tu proyecto:
+* Tokens CSS semánticos (`--app-bg`, `--app-cyan`, etc.) y compatibles con librerías como Shadcn UI.
+* Modo oscuro automático con soporte de cambio mediante `data-theme="light"` o la clase `.light`.
+* Compatibilidad instantánea con Tailwind CSS v4 para aplicar opacidades con `color-mix` (ej: `bg-app-cyan/15`, `border-app-grid/50`).
 
-```css
-@import "https://cdn.jsdelivr.net/gh/d3im3r/d3im3r-brand-assets@v1.0.0/styles/theme.css";
-```
+### 2. Copiar los componentes reactivos de tema
+Copia los archivos de la carpeta [`snippets/`](snippets/) en tu estructura de componentes:
+* `snippets/use-theme.ts` ➡️ `src/hooks/use-theme.ts` (maneja la persistencia en `localStorage` y las clases en `<html>`).
+* `snippets/theme-toggle.tsx` ➡️ `src/components/theme-toggle.tsx` (botón con iconos interactivos de Luna y Sol).
 
-This immediately enables:
-* Native CSS variables (`--app-bg`, `--app-panel`, etc.) and Shadcn-compatible tokens.
-* Dark mode as the default, switching to light mode with `data-theme="light"` or `.light`.
-* Automatic Tailwind CSS v4 `@theme inline` support with opacity modifiers (e.g., `bg-app-cyan/15`, `border-app-grid/60`).
-
-### 2. Responsive Light/Dark Logo
-
-```html
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://cdn.jsdelivr.net/gh/d3im3r/d3im3r-brand-assets@v1.0.0/assets/svg/horizontal-dark.svg"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/d3im3r/d3im3r-brand-assets@v1.0.0/assets/svg/horizontal-light.svg"
-    alt="d3im3r owl-chip logo"
-    width="260"
-  />
-</picture>
-```
-
-### 3. Favicon & Web Manifest
+### 3. Copiar los favicons a tu carpeta `public/`
+Copia los contenidos de [`assets/favicon/`](assets/favicon/) directamente a la carpeta `public/` de tu aplicación y referéncialos localmente en tu HTML:
 
 ```html
-<!-- Adaptive SVG Favicon (automatic dark/light contrast) -->
-<link
-  rel="icon"
-  type="image/svg+xml"
-  href="https://cdn.jsdelivr.net/gh/d3im3r/d3im3r-brand-assets@v1.0.0/assets/favicon/favicon.svg"
-/>
+<!-- Favicon SVG adaptativo al tema del navegador -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-<!-- Standard 32x32 PNG fallback -->
-<link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="https://cdn.jsdelivr.net/gh/d3im3r/d3im3r-brand-assets@v1.0.0/assets/favicon/favicon-32x32.png"
-/>
+<!-- Fallback PNG estándar -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 
-<!-- Apple Touch Icon -->
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="https://cdn.jsdelivr.net/gh/d3im3r/d3im3r-brand-assets@v1.0.0/assets/favicon/apple-touch-icon.png"
-/>
+<!-- Icono para dispositivos Apple -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-<!-- Web App Manifest (PWA / Mobile) -->
-<link
-  rel="manifest"
-  href="https://cdn.jsdelivr.net/gh/d3im3r/d3im3r-brand-assets@v1.0.0/assets/favicon/site.webmanifest"
-/>
+<!-- Manifiesto de aplicación web -->
+<link rel="manifest" href="/site.webmanifest" />
 ```
+
+### 4. Forjar la identidad propia de la aplicación
+Una vez copiados los archivos base, cada proyecto es libre de:
+* Cambiar o agregar acentos propios de la aplicación (por ejemplo, definir colores especializados para tipos de nodos, flujos de datos o estados de hardware).
+* Diseñar iconos o símbolos específicos adaptados a la funcionalidad del proyecto.
+* Ajustar tipografías o radios de borde sin temor a romper otras aplicaciones.
 
 ---
 
-## License and usage
+## Licencia y uso
 
-The repository and all its contents, including artwork, logos, symbols, icons, favicons, design tokens, and the `d3im3r` brand elements, are freely available for personal and commercial use, modification, redistribution, sublicensing, resale, and publication. No authorization issue, prior approval, attribution, or payment is required. See [`LICENSE`](LICENSE) for the full permission grant.
+El repositorio y todo su contenido (arte, logotipos, símbolos, iconos, favicons, especificaciones de tokens y plantillas) están disponibles para uso libre, comercial y personal, sin necesidad de autorización previa, atribución obligatoria ni pagos. Consulta [`LICENSE`](LICENSE) para más detalles.
 
-See [`BRAND.md`](BRAND.md) for optional brand usage recommendations.
+Consulta [`BRAND.md`](BRAND.md) para más pautas conceptuales y de arquitectura de diseño.
